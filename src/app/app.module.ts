@@ -37,7 +37,7 @@ import { NgChartsModule } from 'ng2-charts';
     HttpClientModule,
     NgChartsModule,
   ],
-  providers: [],
+  providers: [NftsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

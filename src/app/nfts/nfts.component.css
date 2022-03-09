@@ -1,12 +1,28 @@
 .main-container {
     padding: 20px;
+    color: white;
+    background-color: black;
+
 }
 
+.nft-section {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    
+}
 .nft-container {
     display: inline-flex;
+    margin: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FF00FF;
+    border-radius: 10px;
 }
 
 .nft-card {
     margin: 20px 20px;
+
 }
 

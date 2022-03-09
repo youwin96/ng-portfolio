@@ -7,14 +7,16 @@
         [mediumPrice]="getMediumPrice()"
         [highPrice]="getHighPrice()"></app-filter>
     </div>
-    <div class="nft-container" *ngFor="let nft of nfts">
-        <div class="nft-card">
-            <div>
-                <img [src]="nft.image" style="max-width:180px">
-            </div>
-            <div class="nft-name"><h4>{{ nft.name }}</h4></div>
-            <div>
-                <h4>Price: {{ nft.price }}</h4>
+    <div class="nft-section">
+        <div class="nft-container" *ngFor="let nft of nfts">
+            <div class="nft-card">
+                <div>
+                    <img [src]="nft.image" style="max-width:180px">
+                </div>
+                <div class="nft-name"><h4>{{ nft.name }}</h4></div>
+                <div>
+                    <h4>Price: {{ nft.price }}</h4>
+                </div>
             </div>
         </div>
     </div>

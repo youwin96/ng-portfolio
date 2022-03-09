@@ -1,3 +1,29 @@
-.spacer{
+/* .spacer{
     flex: 1 1 auto;
+} */
+
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav-content {
+}
+
+mat-sidenav {
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+    border-right: #FF00FF;
+    border-right-width: 2px;
+}
+
+.nav-button{
+    width: 100%;
+    color: #ff77ff;
+}
+
+.mat-divider{
+    width: 80%;
+    margin: auto;
+    background-color: #FF00FF;
+    border-top-width: 1.5px;
 }

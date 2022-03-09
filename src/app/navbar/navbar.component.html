@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="mat-elevation-z6">
+<!-- <mat-toolbar color="primary" class="mat-elevation-z6">
     <mat-icon>flare</mat-icon>
 
     <div class="spacer"></div>
@@ -6,4 +6,19 @@
     <a mat-button>Home</a>
     <a mat-button routerLink="chart">Charts</a>
     <a mat-button routerLink="nfts">NFT portfolio</a>
-</mat-toolbar>
+</mat-toolbar> -->
+
+<mat-sidenav-container>
+    <mat-sidenav color="primary" opened mode="side" class="mat-elevation-z3">
+        <mat-list>
+            <mat-list-item><a class="nav-button" mat-button>Home</a></mat-list-item>
+            <mat-divider class="mat-divider"></mat-divider>
+            <mat-list-item><a class="nav-button" mat-button routerLink="chart">Charts</a></mat-list-item>
+            <mat-divider class="mat-divider"></mat-divider>
+            <mat-list-item><a class="nav-button" mat-button routerLink="nfts">NFT portfolio</a></mat-list-item>
+          </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

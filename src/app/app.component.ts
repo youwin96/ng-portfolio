@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { NftsComponent } from './nfts/nfts.component';
 
 
 
@@ -8,19 +9,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'portfolio-brice';
+  
+  floorPrice: number = 0
+
+  ngOnInit() {
+  }
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
   ) { }
 
-  test() {
-    this.http.get<any>('https://api-mainnet.magiceden.dev/v2/collections/monkelabs/stats').subscribe(data => {
-      console.log(data);
-    });
-  
-  }
 
 }
 
