@@ -1,0 +1,12 @@
+.main-container {
+    padding: 20px;
+}
+
+.nft-container {
+    display: inline-flex;
+}
+
+.nft-card {
+    margin: 20px 20px;
+}
+
