@@ -7,6 +7,16 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  constructor() {
+
+  }
+
+  ngOnInit() {
+    this.Repeat();
+  }
+
+
   Repeat() {
     setTimeout(() => {
       this.__FunctionSlide();
@@ -14,7 +24,8 @@ export class HomeComponent implements OnInit {
     }, 2000);
   }
 
-  imageData = ['assets/nfts/angomon.png', 'assets/nfts/cozy.png', 'assets/nfts/element1.png', 'assets/nfts/jelly1.png', 'assets/nfts/mixmob1.png', 'assets/nfts/pixel3.png']
+  imageData = ['assets/nfts/angomon.png', 'assets/nfts/cozy.png', 'assets/nfts/element1.png',
+    'assets/nfts/jelly1.png', 'assets/nfts/mixmob1.png', 'assets/nfts/pixel3.png']
 
   startIndex: number = 0
 
@@ -38,16 +49,6 @@ export class HomeComponent implements OnInit {
       slide.style.display = 'block';
       this.startIndex++;
     }
-  }
-
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private router: Router) {
-
-  }
-
-  ngOnInit() {
-    this.Repeat();
   }
 
 }

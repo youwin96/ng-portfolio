@@ -12,9 +12,6 @@ import { NftsService } from '../nfts.service';
 })
 export class NftdetailsComponent implements OnInit {
 
-  nft: any = []
-  
-
   constructor(
     private route: ActivatedRoute,
     private nftsService: NftsService,
@@ -24,6 +21,8 @@ export class NftdetailsComponent implements OnInit {
   ngOnInit(): void {
     this.getNft()
   }
+
+  nft: any = []
 
   getNft(): any {
     const id = Number(this.route.snapshot.paramMap.get('id'));

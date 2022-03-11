@@ -7,7 +7,8 @@
             </div>
             <div class="nft-name"><h3>{{ nft.name }}</h3></div>
             <div>
-                <h4>Floor Price: <span>{{ nft.price }}</span></h4>
+                <h4>Floor Price:  <span>{{ nft.price }}</span></h4>
+                <h4>Volume Traded:  <span>($){{ nft.volumeTraded }}</span></h4>
             </div>
         </div>
         <app-chart [lineData]="nft.data"></app-chart>
