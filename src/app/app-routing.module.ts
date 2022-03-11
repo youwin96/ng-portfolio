@@ -6,9 +6,9 @@ import { ChartComponent } from './chart/chart.component';
 import { NftdetailsComponent } from './nftdetails/nftdetails.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: 'home', component: HomeComponent},
   {path: 'nfts', component: NftsComponent},
-  {path: 'nfts/chart', component: ChartComponent},
   {path: 'detail/:id', component: NftdetailsComponent}
 ];
 
