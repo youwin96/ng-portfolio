@@ -5,6 +5,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -14,7 +15,8 @@ const MaterialComponents = [
   MatIconModule,
   MatSidenavModule,
   MatDividerModule,
-  MatListModule
+  MatListModule,
+  MatSelectModule
   
 ]
 

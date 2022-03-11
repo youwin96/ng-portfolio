@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NftsService } from '../nfts.service';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-nfts',
@@ -37,36 +38,6 @@ export class NftsComponent implements OnInit {
   getNfts(): void {
     this.nfts = this.nftsService.getNfts();
   }
-  
-
-  getAllNfts() {
-    return this.nfts.length;
-
-  }
-
-  getLowPrice() {
-    return this.nfts.filter(
-      nfts => nfts.price >= 1 && nfts.price < 2).length;
-  }
-
-  getMediumPrice() {
-    return this.nfts.filter(
-      nfts => nfts.price >= 2 && nfts.price < 3).length;
-  }
-
-  getHighPrice() {
-    return this.nfts.filter(
-      nfts => nfts.price >= 3).length;
-  }
-
-  fetchFloorPrice(name: string): any {
-    this.http.get<any>(`https://api-mainnet.magiceden.dev/v2/collections/${name}/stats`).subscribe(data => {
-      console.log(data);
-      // this.floorPrice = data.floorPrice;
-      return (data.floorPrice / 1000000000);
-    });
-
-  }
 
   searchText: string = '';
 
@@ -75,6 +46,42 @@ export class NftsComponent implements OnInit {
     this.searchText = searchValue;
     // console.log(this.searchText);
   }
+
+  sortFloorD(): any {
+    this.nfts = this.nfts.sort(function (a, b) {
+      return b.price - a.price
+    });
+  }
+
+  sortFloorA(): any {
+    this.nfts = this.nfts.sort(function (a, b) {
+      return a.price - b.price
+    });
+  }
+
+  sortNameD(): any {
+    this.nfts = this.nfts.sort(function (a, b) {
+      if(a.name < b.name) { return -1; }
+      if(a.name > b.name) { return 1; }
+      return 0;
+    });
+  }
+
+  sortNameA(): any {
+    this.nfts = this.nfts.sort(function (a, b) {
+      if(b.name < a.name) { return -1; }
+      if(b.name > a.name) { return 1; }
+      return 0;
+    });
+  }
+
+  resetSelect(): any{
+    this.nfts = this.nfts.sort(function (a, b) {
+      return a.id - b.id
+    });
+  }
+
+  selectedValue = ''
 
   // async changeFloorPrice() {
   //   this.nfts.forEach(async (data: any) => {
