@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Chart } from 'chart.js';
+import { NftsService } from '../nfts.service';
 
 
 @Component({
@@ -8,44 +9,35 @@ import { Chart } from 'chart.js';
   styleUrls: ['./chart.component.css']
 })
 
-export class ChartComponent {
+export class ChartComponent implements OnInit {
+
+  @Input() lineData: [] = []
+
+  constructor(private nftsService: NftsService) { }
 
   ngOnInit(): void {
     const myChart = new Chart("myChart", {
-      type: 'bar',
+      type: 'line',
       data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['06/03', '07/03', '08/03', '09/03', '10/03', '11/03'],
         datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ],
+          label: 'FloorPrice',
+          borderColor: 'rgb(227, 11, 93)',
+          backgroundColor: 'rgb(102, 252, 241)',
+          pointBackgroundColor: 'rgb(102, 252, 241)',
+
+          data: this.lineData,
           borderWidth: 1
         }]
       },
       options: {
         scales: {
           y: {
-            beginAtZero: true
+            beginAtZero: true,
           }
         }
       }
     });
+
   }
-
-
 }

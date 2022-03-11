@@ -10,11 +10,11 @@ import { MaterialModule } from './material/material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NftsComponent } from './nfts/nfts.component';
 import { SearchComponent } from './search/search.component';
-import { FilterComponent } from './filter/filter.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ChartComponent } from './chart/chart.component';
 import { NgChartsModule } from 'ng2-charts';
+import { NftdetailsComponent } from './nftdetails/nftdetails.component';
 
 
 @NgModule({
@@ -25,8 +25,8 @@ import { NgChartsModule } from 'ng2-charts';
     NavbarComponent,
     NftsComponent,
     SearchComponent,
-    FilterComponent,
     ChartComponent,
+    NftdetailsComponent,
   ],
   imports: [
     BrowserModule,

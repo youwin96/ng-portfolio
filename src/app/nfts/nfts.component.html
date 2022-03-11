@@ -1,21 +1,19 @@
 <div class="main-container">
     <div>
-        <app-search></app-search>
-        <app-filter 
-        [allNfts]="getAllNfts()"
-        [lowPrice]="getLowPrice()"
-        [mediumPrice]="getMediumPrice()"
-        [highPrice]="getHighPrice()"></app-filter>
+        <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
     </div>
-    <div class="nft-section">
-        <div class="nft-container" *ngFor="let nft of nfts">
-            <div class="nft-card">
-                <div>
-                    <img [src]="nft.image" style="max-width:180px">
-                </div>
-                <div class="nft-name"><h4>{{ nft.name }}</h4></div>
-                <div>
-                    <h4>Price: {{ nft.price }}</h4>
+    <div class="main-nft-section">
+        <div class="nft-section" *ngFor="let nft of nfts">
+            <div class="nft-container" *ngIf="searchText === '' || nft.name.toLowerCase().includes(searchText) ">
+                <div class="nft-card">
+                    <div>
+                        <img [src]="nft.image" style="max-width:180px">
+                    </div>
+                    <div class="nft-name"><h3>{{ nft.name }}</h3></div>
+                    <!-- <div>
+                        <h4>Price: {{ nft.price }}</h4>
+                    </div> -->
+                    <button mat-raised-button routerLink="/detail/{{nft.id}}">Details</button>
                 </div>
             </div>
         </div>

@@ -1,0 +1,15 @@
+<button mat-raised-button type="button" (click)="goBack()">go back</button>
+<div class="nft-section">
+    <div class="nft-container" *ngIf="nft">
+        <div class="nft-card">
+            <div>
+                <img [src]="nft.image" style="max-width:180px">
+            </div>
+            <div class="nft-name"><h3>{{ nft.name }}</h3></div>
+            <div>
+                <h4>Floor Price: <span>{{ nft.price }}</span></h4>
+            </div>
+        </div>
+        <app-chart [lineData]="nft.data"></app-chart>
+    </div>
+</div>
