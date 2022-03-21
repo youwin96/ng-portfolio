@@ -1,42 +1,45 @@
 * {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-button{
-    color: #E30B5D;
-    margin: 20px;
+button {
+  color: #E30B5D;
+  margin: 20px;
 }
 
-.nft-container{
-    display: flex;
-    margin: 2rem;
-    justify-content: center;
-
+.nft-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.nft-card{
-    border-style: solid;
-    border-width: 2px;
-    border-color: #66FcF1;
-    border-radius: 10px;
-    background-color: #1F2833;
-    height: 380px;
-    padding: 20px;
-    margin-right: 20px;
-
+.nft-container .nft-card {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #66FcF1;
+  border-radius: 10px;
+  background-color: #1F2833;
+  height: 380px;
+  padding: 20px;
+  margin-right: 20px;
 }
 
-img {
-    border-style: solid;
-    border-width: 5px;
-    border-color: #000000;
-    border-radius: 10px;
+.nft-container .nft-card img {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #000000;
+  border-radius: 10px;
 }
 
-h3{
-    text-align: center;
+.nft-container .nft-card h3 {
+  text-align: center;
 }
 
-h4 span{
-    color: #E30B5D;
+.nft-container .nft-card h4 span {
+  color: #E30B5D;
 }
+/*# sourceMappingURL=nftdetails.component.css.map */

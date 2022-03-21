@@ -1,65 +1,68 @@
 .main-container {
-    padding: 50px;
-    color: white;
-    background-color: #0B0C10;
-    height: 100%;
-
+  padding: 50px;
+  color: white;
+  background-color: #0B0C10;
+  height: 100%;
 }
 
-.sort-button-container {
-    color: #ffffff;
-    margin-left: 2%;
+.main-container .sort-button-container {
+  color: #ffffff;
+  margin-left: 2%;
 }
 
-mat-form-field {
-    background-color: #ffffff;
-    margin: 0px;
-    border-radius: 10px;
-    height: 60px;
+.main-container .sort-button-container mat-form-field-wrapper {
+  margin-bottom: -1.25em;
 }
 
-mat-form-field-wrapper{
-    margin-bottom: -1.25em;
+.main-container .sort-button-container mat-form-field-wrapper mat-form-field {
+  background-color: #ffffff;
+  margin: 0px;
+  border-radius: 10px;
+  height: 60px;
 }
 
-mat-label {
-    color: #000000;
+.main-container .sort-button-container mat-form-field-wrapper mat-form-field mat-label {
+  color: #000000;
 }
 
-.main-nft-section  {
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-}
-.nft-container {
-    display: inline-flex;
-    margin: 1rem;
-    margin-bottom: 2rem;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #66FcF1;
-    border-radius: 10px;
-    background-color: #1F2833;
+.main-container .main-nft-section {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.nft-card {
-    margin: 20px 20px;
-    text-align: center;
-
+.main-container .main-nft-section .nft-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 1rem;
+  margin-bottom: 2rem;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #66FcF1;
+  border-radius: 10px;
+  background-color: #1F2833;
 }
 
-img {
-    border-style: solid;
-    border-width: 5px;
-    border-color: #000000;
-    border-radius: 10px;
+.main-container .main-nft-section .nft-container .nft-card {
+  margin: 20px 20px;
+  text-align: center;
 }
 
-button{
-    color: #E30B5D;
+.main-container .main-nft-section .nft-container .nft-card img {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #000000;
+  border-radius: 10px;
 }
 
-
-
+.main-container .main-nft-section .nft-container .nft-card button {
+  color: #E30B5D;
+}
+/*# sourceMappingURL=nfts.component.css.map */

@@ -1,0 +1,36 @@
+$dark-color: #0B0C10;
+
+mat-sidenav-container {
+    height: 100%;
+    mat-sidenav {
+        width: 200px;
+        background-color: #1F2833;
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15%;
+            width: 50%;
+        }
+        mat-list {
+            margin-top: 20%;
+            .nav-button {
+                width: 100%;
+                color: #66FcF1;
+            }
+            .mat-divider {
+                width: 80%;
+                margin: auto;
+                background-color: $dark-color;
+                border-top-width: 2px;
+            }
+        }
+    }
+    mat-sidenav-content {
+        height: 100%;
+        background-color: $dark-color;
+    }    
+}
+
+
+
