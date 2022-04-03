@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ChartComponent } from './chart/chart.component';
 import { NgChartsModule } from 'ng2-charts';
 import { NftdetailsComponent } from './nftdetails/nftdetails.component';
+import { LiveFloorpriceComponent } from './live-floorprice/live-floorprice.component';
+import { ChildTestComponent } from './child-test/child-test.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { NftdetailsComponent } from './nftdetails/nftdetails.component';
     SearchComponent,
     ChartComponent,
     NftdetailsComponent,
+    LiveFloorpriceComponent,
+    ChildTestComponent,
   ],
   imports: [
     BrowserModule,

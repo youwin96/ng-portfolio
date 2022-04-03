@@ -1,34 +1,38 @@
 <div class="main-container">
-    <div>
-        <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
-    </div>
-    <div class="sort-button-container">
-        <mat-form-field color="warn" appearance="fill">
-            <mat-label>Sort</mat-label>
-            <mat-select [(value)]="selectedValue">
-                <mat-option value="sort floor price(low - high)" (click)="sortFloorA()">sort floor price(low - high)</mat-option>
-                <mat-option value="sort floor price(high - low)" (click)="sortFloorD()">sort floor price(high - low)</mat-option>
-                <mat-option value="sort alphabetically(a - z)" (click)="sortNameD()()">sort alphabetically(a - z)</mat-option>
-                <mat-option value="sort alphabetically(z - a)" (click)="sortNameA()()">sort alphabetically(z - a)</mat-option>
-                <mat-option value="reset" (click)="resetSelect()">reset(by ID)</mat-option>
-            </mat-select>
+  <div>
+    <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+  </div>
+  <div class="sort-button-container">
+    <mat-form-field color="warn" appearance="fill">
+      <mat-label>Sort</mat-label>
+      <mat-select [(value)]="selectedValue">
+        <mat-option value="sort floor price(low - high)" (click)="sortFloorA()">sort floor price(low - high)
+        </mat-option>
+        <mat-option value="sort floor price(high - low)" (click)="sortFloorD()">sort floor price(high - low)
+        </mat-option>
+        <mat-option value="sort alphabetically(a - z)" (click)="sortNameD()()">sort alphabetically(a - z)</mat-option>
+        <mat-option value="sort alphabetically(z - a)" (click)="sortNameA()()">sort alphabetically(z - a)</mat-option>
+        <mat-option value="reset" (click)="resetSelect()">reset(by ID)</mat-option>
+      </mat-select>
 
-      </mat-form-field>
-    </div>
-    <div class="main-nft-section">
-        <div class="nft-section" *ngFor="let nft of nfts">
-            <div class="nft-container" *ngIf="searchText === '' || nft.name.toLowerCase().includes(searchText) ">
-                <div class="nft-card">
-                    <div>
-                        <img [src]="nft.image" style="max-width:180px">
-                    </div>
-                    <div class="nft-name"><h3>{{ nft.name }}</h3></div>
-                    <div>
-                        <h4>Floor Price: {{ nft.price }}</h4>
-                    </div>
-                    <button mat-raised-button routerLink="/detail/{{nft.id}}">Details</button>
-                </div>
-            </div>
+    </mat-form-field>
+  </div>
+  <div class="main-nft-section">
+    <div class="nft-section" *ngFor="let nft of nfts">
+      <div class="nft-container" *ngIf="searchText === '' || nft.name.toLowerCase().includes(searchText) ">
+        <div class="nft-card">
+          <div>
+            <img [src]="nft.image" style="max-width:180px">
+          </div>
+          <div class="nft-name">
+            <h3>{{ nft.name }}</h3>
+          </div>
+          <div>
+            <h4>Floor Price: {{ nft.floorPrice || 'N/A' }}</h4>
+          </div>
+          <button mat-raised-button routerLink="/detail/{{nft.id}}">Details</button>
         </div>
+      </div>
     </div>
+  </div>
 </div>

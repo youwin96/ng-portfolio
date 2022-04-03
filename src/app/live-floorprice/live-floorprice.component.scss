@@ -1,0 +1,56 @@
+.listViewContainer {
+    width: 100%;
+
+    table {
+        width: 100%;
+
+        .mat-column-symbol {
+            font-weight: 1000;
+
+        }
+
+        .mat-header-cell {
+            font-weight: 1000;
+            font-size: 16px;
+        }
+
+        .mat-cell {
+            padding: 10px;
+        }
+
+        tr:nth-child(9) {
+
+            background-color: grey;
+        
+            td:nth-child(3) {
+                color: aqua;
+            } 
+        } 
+    }
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background-color: grey;
+
+    .input-container {
+        
+        button {
+            background-color: darkgray;
+            color: black;
+        }
+    }
+
+    .text-box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+}
