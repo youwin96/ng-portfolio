@@ -39,6 +39,8 @@
     <button (click)="onSubmit(input)">Submit</button>
   </div>
   <div class="text-box">
-    <app-child-test ></app-child-test>
+    <app-child-test>
+      <p #parentElement>This is from parent</p>
+    </app-child-test>
   </div>
 </div>
